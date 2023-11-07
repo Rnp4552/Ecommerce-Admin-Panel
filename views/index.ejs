@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="htmlcss bootstrap aside menu, vertical, sidebar nav menu CSS examples" />
+<meta name="description" content="Bootstrap 5 sidebar navigation menu example" />  
+
+<title>Demo - Bootstrap 5 sidebar vertical menu sample. html code example </title>
+<link rel="stylesheet" href="../css/style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+
+
+<script type="text/javascript">
+	window.addEventListener("resize", function() {
+		"use strict"; window.location.reload(); 
+	});
+
+	document.addEventListener("DOMContentLoaded", function(){
+		 // make it as accordion for smaller screens
+		if (window.innerWidth < 992) {
+
+			document.querySelectorAll('.sidebar .nav-link').forEach(function(element){
+				
+				element.addEventListener('click', function (e) {
+
+				  	let nextEl = element.nextElementSibling;
+				  	let parentEl  = element.parentElement;
+				  	let allSubmenus_array =	parentEl.querySelectorAll('.submenu');
+
+				  	if(nextEl && nextEl.classList.contains('submenu')) {	
+				  		e.preventDefault();	
+				  		if(nextEl.style.display == 'block'){
+				  			nextEl.style.display = 'none';
+
+				  		} else {
+				  			nextEl.style.display = 'block';
+				  		}
+
+				  	}
+				});
+			})
+		}
+		
+
+	}); 
+	
+</script>
+
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Ecommerce Admin-Pannel</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Contact us</a>
+              </li>
+             
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+<header class="section-header py-3">
+<div class="container">
+	<h2>All Products </h2> 
+</div>
+</header> 
+
+<div class="container">
+
+<section class="section-content py-3">
+	<div class="row">
+		<aside class="col-lg-3"> 
+
+<nav class="sidebar card py-2 mb-4">
+<ul class="nav flex-column">
+	<li class="nav-item">
+		<a class="nav-link" href="#"> Games <b class="float-end">&raquo;</b> </a>
+		<ul class="submenu dropdown-menu">
+			<li><a class="nav-link" href="#">Indoor games </a></li>
+		    <li><a class="nav-link" href="#">outdoor games </a></li>
+		</ul>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="#"> Electronics <b class="float-end">&raquo;</b> </a>
+		<ul class="submenu dropdown-menu">
+			<li><a class="nav-link" href="#">Mobile </a></li>
+		    <li><a class="nav-link" href="#">Refrigerator </a></li>
+		    <li><a class="nav-link" href="#">Television </a>
+            <li><a class="nav-link" href="#">Washing Machine </a>
+            <li><a class="nav-link" href="#">Blender </a>   
+            <li><a class="nav-link" href="#">Soundbaar </a>
+            <li><a class="nav-link" href="#">Mixture </a>
+		    </li>
+		</ul>
+	</li>
+	
+	<li class="nav-item">
+		<a class="nav-link" href="#"> Sofaa </a>
+	</li>
+    <li class="nav-item">
+		<a class="nav-link" href="#"> Footwear <b class="float-end">&raquo;</b> </a>
+		<ul class="submenu dropdown-menu">
+			<li><a class="nav-link" href="#">Sneakers </a></li>
+		    <li><a class="nav-link" href="#">Formal </a></li>
+		    <li><a class="nav-link" href="#">Boot </a>
+            <li><a class="nav-link" href="#">Sandal </a>
+            <li><a class="nav-link" href="#">Chukka boot </a>   
+            <li><a class="nav-link" href="#">combat boot </a>
+            <li><a class="nav-link" href="#">court shoe </a>
+		    </li>
+		</ul>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="#">  Books Education  </a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="#"> Gifting </a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="#"> Travel Auto </a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="#"> Feshion and Beauty </a>
+	</li>
+</ul>
+</nav>
+
+		</aside>
+        <div class="card" style="width: 18rem; ">
+            <img src="../public/image/shoes4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Brand: Nike<br>Price: 4232rupees.   </p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="../public/image/shoes5.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Brand: Adidas<br>Price: 7232rupees.</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="../public/image/shoes6.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Brand: Diesel<br> Price: 3232rupees.</p>
+            </div>
+          </div>
+		<div class="card" style="width: 18rem;margin-left: 330px; margin-top: 12px;">
+            <img src="../public/image/shoes1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Brand: Liberty<br> Price: 1232rupees </p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem; margin-top: 12px;">
+            <img src="../public/image/shoes2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Brand: Reebok<br>Price: 2232rupees.</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem; margin-top: 12px;">
+            <img src="../public/image/shoes3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Brand: Woodland<br>Price: 1200rupees.</p>
+            </div>
+          </div>
+         
+	</div>
+</section>
+
+</div>
+
+</body>
+</html>
